@@ -54,12 +54,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	 ctx.fillText("Heba", 10, 50);
 }
 	
-	 var canvas = document.getElementById("Canvasa");
- 	 var context = canvas.getContext("2d");
-  	 var texas = new Image();
- 	 texas.src = "hookem.jpeg";
- 	 texas.onload = function() {
-  	 	context.drawImage(texas, 10, 10);
+	 function drawImage() {
+	 	var canvas = document.getElementById("Canvasa");
+ 		 var context = canvas.getContext("2d");
+  		 var texas = new Image();
+ 		 texas.src = "hookem.jpeg";
+ 	 	 texas.onload = function() {
+  	 		context.drawImage(texas, 10, 10);
+ }
 }
 	
 </script>
