@@ -48,6 +48,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   }
 }
 	
+	function draw() {
+ 	 const ctx = document.getElementById("Canvasa").getContext("2d");
+ 	 ctx.font = "48px serif";
+ 	 ctx.fillText("Heba", 10, 50);
+}
+	
 </script>
 
 
@@ -83,7 +89,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</canvas> <!-- this creates the canvas -->
 	
 	 <p><a onclick="draw();"class="w3-btn w3-black"> Draw Rectangle </a>  <!-- this creates a button to draw a rectangle on the canvas -->
-	 <p><a class="w3-btn w3-black"> Write My Name </a>  <!-- this creates a button to write my name on the canvas -->
+	 <p><a onclick="draw();"class="w3-btn w3-black"> Write My Name </a>  <!-- this creates a button to write my name on the canvas -->
 	 <p><a class="w3-btn w3-black"> Load Image </a>  <!-- this creates a button to load an image onto the canvas -->
 	 <p><a class="w3-btn w3-black"> Clear Canvas </a>  <!-- this creates a button to clear the canvas -->
 	 
