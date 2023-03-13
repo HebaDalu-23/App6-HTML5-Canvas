@@ -35,9 +35,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	function draw_b() {
+ 	   var b_canvas = document.getElementById("b");
+ 	   var b_context = b_canvas.getContext("2d");
+  	   b_context.fillRect(50, 25, 150, 100);
+}
+	
 </script>
 
 
@@ -72,7 +79,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<canvas id="a" width="300" height="225" style="border: 5px solid black;">  <!-- this adds the border -->
 	</canvas> <!-- this creates the canvas -->
 	
-	 <p><a class="w3-btn w3-black"> Draw Rectangle </a>  <!-- this creates a button to draw a rectangle on the canvas -->
+	 <p><a onclick="draw_b();"class="w3-btn w3-black"> Draw Rectangle </a>  <!-- this creates a button to draw a rectangle on the canvas -->
 	 <p><a class="w3-btn w3-black"> Write My Name </a>  <!-- this creates a button to write my name on the canvas -->
 	 <p><a class="w3-btn w3-black"> Load Image </a>  <!-- this creates a button to load an image onto the canvas -->
 	 <p><a class="w3-btn w3-black"> Clear Canvas </a>  <!-- this creates a button to clear the canvas -->
