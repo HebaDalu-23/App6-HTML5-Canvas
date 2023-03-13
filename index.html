@@ -55,9 +55,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 	
 	function drawImage()  {
- 	 const ctx = document.getElementById("Canvasa").getContext("2d");
-	  var img = document.getElementById("hookem.jpeg");
-	  ctx.drawImage(img, 10, 10);
+ 	 var c = document.getElementById("Canvasa");
+  	 var ctx = c.getContext("2d");
+  	 var img = document.getElementById("hookem.jpeg");
+  	 ctx.drawImage(img,10,10);
 }
 	
 </script>
