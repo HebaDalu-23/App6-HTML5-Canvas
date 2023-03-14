@@ -41,8 +41,8 @@ The image used in this app comes from the University Coop (the link is above).
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-	function drawA() { // this creates a function to draw a rectangle on my canvas named "CanvasA"
-	  const canvas = document.getElementById("CanvasA");
+	function drawA() { // this creates a function to draw a rectangle on my canvas named "CanvasA" that I can later reference in the button for this
+	  const canvas = document.getElementById("CanvasA"); // this is what makes it clear to use the canvas that I named "CanvasA" for this action
  	  if (canvas.getContext) {
     		const ctx = canvas.getContext("2d");
 
