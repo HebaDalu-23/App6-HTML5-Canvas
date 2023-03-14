@@ -43,10 +43,12 @@ The image used in this app comes from the University Coop (the link is above).
 	
 	function drawA() { // this creates a function to draw a rectangle on my canvas named "CanvasA" that I can later reference in the button for this
 	  const canvas = document.getElementById("CanvasA"); // this is what makes it clear to use the canvas that I named "CanvasA" for this action
+	  if (canvas.getContext) {
 		const ctx = canvas.getContext("2d");
 
   		 ctx.fillStyle = "#EEA990";
 		 ctx.fillRect(50, 50, 200, 100);
+ }
 }
 	
 	function drawB() {
