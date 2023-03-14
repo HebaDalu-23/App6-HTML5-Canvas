@@ -49,13 +49,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 	
 	function drawB() {
- 	 const ctx = document.getElementById("Canvasa").getContext("2d");
- 	 ctx.font = "48px serif";
+ 	 const ctx = document.getElementById("CanvasA").getContext("2d");
+ 	 ctx.font = "48px arial";
  	 ctx.fillText("Heba", 10, 50);
 }
 	
 	 function drawImage() {
-	 	 var canvas = document.getElementById("Canvasa");
+	 	 var canvas = document.getElementById("CanvasA");
  		 var context = canvas.getContext("2d");
   		 var texas = new Image();
  		 texas.src = "hookem.jpeg";
@@ -65,7 +65,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 	
 	function clearRect() {
-		var canvas = document.getElementById("Canvasa");
+		var canvas = document.getElementById("CanvasA");
 		var context = canvas.getContext("2d");
 		context.clearRect(0, 0, 300, 300);
 }
@@ -101,7 +101,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div id="content" class="w3-container">
 	<p>               </p>
-	<canvas id="Canvasa" width="300" height="300" style="border: 3px solid black;">  <!-- this adds the border -->
+	<canvas id="CanvasA" width="300" height="300" style="border: 3px solid black;">  <!-- this adds the border -->
 	</canvas> <!-- this creates the canvas -->
 	
 	 <p><a onclick="drawA();"class="w3-btn w3-black"> Draw Rectangle </a>  <!-- this creates a button to draw a rectangle on the canvas -->
