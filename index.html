@@ -43,35 +43,35 @@ The image used in this app comes from the University Coop (the link is above).
 	
 	function drawA() { // this creates a function to draw a rectangle on my canvas named "CanvasA" that I can later reference in the button for this
 	  const canvas = document.getElementById("CanvasA"); // this is what makes it clear to use the canvas that I named "CanvasA" for this action
-	  if (canvas.getContext) {
-		const ctx = canvas.getContext("2d");
+	  if (canvas.getContext) { // this helps the apperance of this action on the canvas
+		const ctx = canvas.getContext("2d"); // this signifies that the canvas is being made in 2 dimensions
 
-  		 ctx.fillStyle = "#EEA990";
-		 ctx.fillRect(50, 50, 200, 100);
- }
-}
+  		 ctx.fillStyle = "#EEA990"; // this gives the rectangle box a color that I chose via a hex code instead of the default which is black
+		 ctx.fillRect(50, 50, 200, 100); // the rectangle starts 50 units from the origin in the x and y direction and is 200 pixels by 100 pixels large
+ } // brackets are necessary to close out this section 
+} // brackets are necessary to close out this section 
 	
-	function drawB() {
- 	 const ctx = document.getElementById("CanvasA").getContext("2d");
- 	 ctx.font = "50px cursive";
- 	 ctx.fillText("Heba", 10, 50);
-}
+	function drawB() { // this creates a function to display my name on my canvas named "CanvasA". i named this one 'drawB' to distguish between the previous function when I reference them for the buttons later on. 
+ 	 const ctx = document.getElementById("CanvasA").getContext("2d"); // this makes it clear to display the output onto CanvasA and specifies it is in 2 dimensions
+ 	 ctx.font = "50px cursive"; // this specifies to use a cursive font that is 50 pixels large
+ 	 ctx.fillText("Heba", 10, 50); // this is what displays my name and its position on the canvas, 10 units away from the origin on the x axis and 50 units away from the origin on the y axis
+} // brackets are necessary to close out this section
 	
-	 function drawImage() {
-	 	 var canvas = document.getElementById("CanvasA");
- 		 var context = canvas.getContext("2d");
-  		 var texas = new Image();
- 		 texas.src = "hookem.jpeg";
- 	 	 texas.onload = function() {
-  	 		context.drawImage(texas, 0, 0, 290, 290);
- }
-}
+	 function drawImage() { // this creates a function to display the image that i chose
+	 	 var canvas = document.getElementById("CanvasA"); // this is what makes it clear to display the chosen image onto the canvas i named CanvasA
+ 		 var context = canvas.getContext("2d"); // this specifies it is in 2 dimensions
+  		 var texas = new Image(); // this makes it clear there's a new image and gives it a brief title
+ 		 texas.src = "hookem.jpeg"; // the title and image are linked to the file named what is in the quotation marks
+ 	 	 texas.onload = function() { // this loads the image
+  	 		context.drawImage(texas, 0, 0, 290, 290); // this specifies the dimensions in which the image will be displayed: at the origin, 0 units away from the x and y axes and 290 x 290 pixels large
+ } // brackets are necessary to close out this section
+} // brackets are necessary to close out this section
 	
-	function clearRect() {
-		var canvas = document.getElementById("CanvasA");
-		var context = canvas.getContext("2d");
-		context.clearRect(0, 0, 300, 300);
-}
+	function clearRect() { // this creates a function to clear the canvas
+		var canvas = document.getElementById("CanvasA"); // this specifies to clear CanvasA
+		var context = canvas.getContext("2d"); // this specifies it is still in 2 dimensions
+		context.clearRect(0, 0, 300, 300); // this specifies to clear the ENTIRE canvas, all 300 x 300 pixels, not just parts of it
+} // brackets are necessary to close out this section
 	
 </script>
 
@@ -103,14 +103,14 @@ The image used in this app comes from the University Coop (the link is above).
 </div>
 	
 <div id="content" class="w3-container">
-	<p>               </p>
-	<canvas id="CanvasA" width="300" height="300" style="border: 3px solid black;">  <!-- this adds the border -->
-	</canvas> <!-- this creates the canvas -->
+	<p>               </p> <!-- this creates space between the header and the canavs -->
+	<canvas id="CanvasA" width="300" height="300" style="border: 3px solid black;">  <!-- this creates the canvas in dimensions of 300 pixels wide and 300 pixels tall. it also adds a black border that is 3 pixels thick -->
+	</canvas> <!-- this finishes out the code of establishing the canvas-->
 	
-	 <p><a onclick="drawA();"class="w3-btn w3-black"> Draw Rectangle </a>  <!-- this creates a button to draw a rectangle on the canvas -->
-	 <p><a onclick="drawB();"class="w3-btn w3-black"> Write My Name </a>  <!-- this creates a button to write my name on the canvas -->
-	 <p><a onclick="drawImage();"class="w3-btn w3-black"> Load Image </a>  <!-- this creates a button to load an image onto the canvas -->
-	 <p><a onclick="clearRect();"class="w3-btn w3-black"> Clear Canvas </a>  <!-- this creates a button to clear the canvas -->
+	 <p><a onclick="drawA();"class="w3-btn w3-black"> Draw Rectangle </a>  <!-- this creates a button to draw a rectangle on the canvas and is where i reference 'drawA' from above -->
+	 <p><a onclick="drawB();"class="w3-btn w3-black"> Write My Name </a>  <!-- this creates a button to write my name on the canvas and is where i reference 'drawB' from above -->
+	 <p><a onclick="drawImage();"class="w3-btn w3-black"> Load Image </a>  <!-- this creates a button to load the hook em image onto the canvas and is where i reference 'drawImage' from above -->
+	 <p><a onclick="clearRect();"class="w3-btn w3-black"> Clear Canvas </a>  <!-- this creates a button to clear the entire canvas and is where i reference 'clearRect' from above -->
 	 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
